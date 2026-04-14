@@ -1,0 +1,103 @@
+@import "lenis/dist/lenis.css";
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-on-error: #690005;
+  --color-on-primary: #3c2f00;
+  --color-tertiary: #c7f5ff;
+  --color-surface-variant: #353534;
+  --color-on-surface-variant: #d1c6ab;
+  --color-surface-container-highest: #353534;
+  --color-secondary-container: #584709;
+  --color-on-tertiary-fixed-variant: #004e59;
+  --color-on-secondary-fixed: #231b00;
+  --color-on-primary-fixed-variant: #574500;
+  --color-outline-variant: #4d4632;
+  --color-surface-container-high: #2a2a2a;
+  --color-primary: #ffecb9;
+  --color-error-container: #93000a;
+  --color-secondary: #ddc57c;
+  --color-on-tertiary-fixed: #001f25;
+  --color-on-surface: #e5e2e1;
+  --color-on-tertiary: #00363e;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-surface-container-low: #1c1b1b;
+  --color-surface-container: #201f1f;
+  --color-background: #131313;
+  --color-inverse-primary: #735c00;
+  --color-on-secondary: #3c2f00;
+  --color-primary-fixed-dim: #eec200;
+  --color-tertiary-fixed: #a0efff;
+  --color-tertiary-container: #33e4ff;
+  --color-on-secondary-fixed-variant: #564507;
+  --color-on-primary-container: #6c5700;
+  --color-outline: #9a9078;
+  --color-surface-bright: #3a3939;
+  --color-on-secondary-container: #cfb76f;
+  --color-primary-container: #facc15;
+  --color-surface-tint: #eec200;
+  --color-secondary-fixed-dim: #ddc57c;
+  --color-on-error-container: #ffdad6;
+  --color-tertiary-fixed-dim: #15daf4;
+  --color-surface-dim: #131313;
+  --color-surface: #131313;
+  --color-inverse-surface: #e5e2e1;
+  --color-on-tertiary-container: #006270;
+  --color-inverse-on-surface: #313030;
+  --color-secondary-fixed: #fbe195;
+  --color-error: #ffb4ab;
+  --color-on-primary-fixed: #231b00;
+  --color-on-background: #e5e2e1;
+  --font-headline: var(--font-manrope);
+  --font-body: var(--font-inter);
+  --font-label: var(--font-inter);
+  --font-sans: var(--font-inter);
+  --radius-sm: 0.125rem;
+  --radius-md: 0rem;
+  --radius-xl: 0.25rem;
+
+  --animate-fade-in: fade-in 0.4s ease-out both;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+* {
+  border-color: rgb(255 255 255 / 0.08);
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+html {
+  background: var(--color-surface);
+  scroll-behavior: auto;
+}
+
+body {
+  background: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+}
+
+a,
+button {
+  outline-color: var(--color-primary-container);
+}
+
+.bg-grid-pattern {
+  background-image: radial-gradient(circle at 1px 1px,
+      rgb(250 204 21 / 0.05) 1px,
+      transparent 0);
+  background-size: 40px 40px;
+}
