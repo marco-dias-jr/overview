@@ -274,8 +274,8 @@ export const portfolioContentByLocale: Record<Locale, PortfolioContent> = {
                     company: "Future Secure AI",
                     highlighted: true,
                     achievements: [
-                        "Entreguei iniciativas complexas de software e IA de ponta a ponta, do desenho da solução até o deploy em ambientes de clientes.",
-                        "Evoluí performance, segurança e confiabilidade operacional em produtos críticos, contribuindo para 3 grandes projetos internacionais de IA sob NDA.",
+                        "Entreguei projetos complexos de software e IA de ponta a ponta, do desenho da solução ao deploy em clientes.",
+                        "Elevei performance, segurança e confiabilidade em produtos críticos, contribuindo para 3 projetos internacionais de IA sob NDA.",
                     ],
                 },
                 {
@@ -283,21 +283,21 @@ export const portfolioContentByLocale: Record<Locale, PortfolioContent> = {
                     period: "2020 — 2024",
                     company: "Arena Consultoria",
                     achievements: [
-                        "Entreguei plataformas web, integrações e sistemas administrativos/comerciais, cobrindo implementação, manutenção, deploy e gestão de mudanças em múltiplos ciclos de projeto.",
-                        "Apoiei entregas internacionais de grande escala sob confidencialidade, colaborando com clientes e times multidisciplinares em fluxos estruturados de entrega.",
+                        "Entreguei plataformas web, integrações e sistemas administrativos, cobrindo implementação, manutenção, deploy e evolução contínua.",
+                        "Atuei em entregas internacionais sob confidencialidade, colaborando com clientes e times multidisciplinares.",
                     ],
                 },
             ],
         },
         stacks: {
             eyebrow: "Ecossistema técnico",
-            title: "Stack dominada",
+            title: "Stack principal",
             categories: [
                 {
                     title: "Engenharia Frontend",
                     icon: "web",
                     description:
-                        "Construção de interfaces reativas e de alta performance com foco em padrões modernos de UX e acessibilidade.",
+                        "Interfaces reativas e rápidas, com foco em UX moderna e acessibilidade.",
                     tags: [
                         "Next.js",
                         "TypeScript",
@@ -331,17 +331,17 @@ export const portfolioContentByLocale: Record<Locale, PortfolioContent> = {
                     title: "IA & Inteligência",
                     icon: "psychology",
                     description:
-                        "Integração de Large Language Models e fluxos de automação customizados em software corporativo.",
+                        "Integração de LLMs e automações sob medida em software corporativo.",
                     columns: [
                         {
                             title: "LLM & Automação",
                             description:
-                                "LangChain, n8n e Flowise para orquestração e automação de fluxos com IA.",
+                                "LangChain, n8n e Flowise para orquestração e automações com IA.",
                         },
                         {
                             title: "Tempo real & Integrações",
                             description:
-                                "Integrações com LiveKit, Twilio e Supabase, com observabilidade via Grafana.",
+                                "LiveKit, Twilio e Supabase com observabilidade via Grafana.",
                         },
                     ],
                     className: "md:col-span-8",
@@ -349,11 +349,11 @@ export const portfolioContentByLocale: Record<Locale, PortfolioContent> = {
             ],
         },
         connect: {
-            eyebrow: "Vamos construir juntos",
-            title: "Pronto para arquitetar seu próximo salto digital?",
+            eyebrow: "Vamos construir",
+            title: "Pronto para o próximo salto digital?",
             resumeTitle: "Currículo detalhado",
             resumeDescription:
-                "Baixe o PDF completo com histórico de projetos e referências profissionais.",
+                "Baixe o PDF com histórico de projetos e referências.",
             resumeButton: "Baixar CV (PDF)",
             links: [
                 { href: "mailto:marcodias.dev@icloud.com", icon: "mail", label: "Email" },
@@ -373,7 +373,7 @@ export const portfolioContentByLocale: Record<Locale, PortfolioContent> = {
         },
         languageModal: {
             title: "Selecionar idioma",
-            description: "Escolha o idioma preferido para este portfólio.",
+            description: "Escolha o idioma.",
             close: "Fechar",
         },
     },

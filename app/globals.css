@@ -27,7 +27,7 @@
   --color-surface-container-lowest: #0e0e0e;
   --color-surface-container-low: #1c1b1b;
   --color-surface-container: #201f1f;
-  --color-background: #131313;
+  --color-background: #0a0a0a;
   --color-inverse-primary: #735c00;
   --color-on-secondary: #3c2f00;
   --color-primary-fixed-dim: #eec200;
@@ -43,8 +43,8 @@
   --color-secondary-fixed-dim: #ddc57c;
   --color-on-error-container: #ffdad6;
   --color-tertiary-fixed-dim: #15daf4;
-  --color-surface-dim: #131313;
-  --color-surface: #131313;
+  --color-surface-dim: #0a0a0a;
+  --color-surface: #0a0a0a;
   --color-inverse-surface: #e5e2e1;
   --color-on-tertiary-container: #006270;
   --color-inverse-on-surface: #313030;
@@ -77,15 +77,16 @@
   border-color: rgb(255 255 255 / 0.08);
   -webkit-user-drag: none;
   user-select: none;
+  outline: none;
 }
 
 html {
-  background: var(--color-surface);
+  background: #0a0a0a;
   scroll-behavior: auto;
 }
 
 body {
-  background: var(--color-surface);
+  background: #0a0a0a;
   color: var(--color-on-surface);
   font-family: var(--font-body);
 }

@@ -19,13 +19,13 @@ export function StacksSection() {
     const stacks = content.stacks
 
     return (
-        <section className="scroll-mt-[40px] bg-surface py-32" id="stacks">
-            <div className="mx-auto max-w-7xl px-8">
-                <div className="mb-20 text-center">
+        <section className="scroll-mt-10 bg-surface py-20 md:scroll-mt-[40px] md:py-32" id="stacks">
+            <div className="mx-auto max-w-7xl px-5 sm:px-6 md:px-8">
+                <div className="mb-14 text-center md:mb-20">
                     <span className="mb-4 block font-label text-sm uppercase tracking-[0.3em] text-primary">
                         {stacks.eyebrow}
                     </span>
-                    <h2 className="font-headline text-5xl font-extrabold tracking-tighter text-white">
+                    <h2 className="font-headline text-4xl font-extrabold tracking-tighter text-white md:text-5xl">
                         {stacks.title}
                     </h2>
                 </div>
@@ -34,13 +34,13 @@ export function StacksSection() {
                     {stacks.categories.map((category) => (
                         <article
                             key={category.title}
-                            className={`${category.className} group rounded-sm bg-surface-container-low p-10 transition-colors hover:bg-surface-container`}
+                            className={`${category.className} group rounded-sm bg-surface-container-low p-6 transition-colors hover:bg-surface-container md:p-10`}
                         >
                             {category.tags ? (
                                 <>
-                                    <div className="mb-10 flex items-start justify-between gap-4">
+                                    <div className="mb-8 flex items-start justify-between gap-4 md:mb-10">
                                         <div className="min-w-0 flex-1">
-                                            <h3 className="mb-2 font-headline text-3xl font-bold text-white">
+                                            <h3 className="mb-2 font-headline text-2xl font-bold text-white md:text-3xl">
                                                 {category.title}
                                             </h3>
                                             <p className="max-w-md text-on-surface-variant">
@@ -97,7 +97,7 @@ export function StacksSection() {
                                         <StackIcon className="h-8 w-8 shrink-0 text-primary" icon={category.icon} />
                                     </div>
 
-                                    <div className="grid grid-cols-2 gap-8">
+                                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
                                         {category.columns.map((column) => (
                                             <div key={column.title}>
                                                 <h4 className="mb-3 font-label text-xs uppercase tracking-widest text-secondary">

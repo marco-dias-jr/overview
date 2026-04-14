@@ -19,22 +19,22 @@ export function ConnectSection() {
     const connect = content.connect
 
     return (
-        <section className="scroll-mt-[40px] relative overflow-hidden py-32" id="connect">
+        <section className="scroll-mt-[38px] relative overflow-hidden py-20 md:scroll-mt-[40px] md:py-32" id="connect">
             <div className="absolute top-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-outline-variant/30 to-transparent" />
 
-            <div className="relative z-10 mx-auto max-w-4xl px-8 text-center">
+            <div className="relative z-10 mx-auto max-w-4xl px-5 text-center sm:px-6 md:px-8">
                 <span className="mb-6 block font-label text-sm uppercase tracking-[0.3em] text-primary">
                     {connect.eyebrow}
                 </span>
-                <h2 className="mb-10 font-headline text-5xl font-extrabold leading-tight tracking-tighter text-white md:text-6xl">
+                <h2 className="mb-8 font-headline text-4xl font-extrabold leading-tight tracking-tighter text-white md:mb-10 md:text-6xl">
                     {connect.title}
                 </h2>
 
-                <div className="mb-16 grid grid-cols-2 gap-4 md:grid-cols-4">
+                <div className="mb-12 grid grid-cols-2 gap-3 md:mb-16 md:grid-cols-4 md:gap-4">
                     {connect.links.map((link) => (
                         <a
                             key={link.label}
-                            className="group flex flex-col items-center gap-3 rounded-sm border border-outline-variant/10 bg-surface-container-low p-6 transition-all hover:bg-surface-container-high"
+                            className="group flex flex-col items-center gap-3 rounded-sm border border-outline-variant/10 bg-surface-container-low p-5 transition-all hover:bg-surface-container-high md:p-6"
                             href={link.href}
                             rel="noreferrer"
                             target={link.href.startsWith("mailto:") ? undefined : "_blank"}
@@ -47,7 +47,7 @@ export function ConnectSection() {
                     ))}
                 </div>
 
-                <div className="flex flex-col items-center justify-between gap-8 rounded-sm border border-outline-variant/20 bg-surface-container-lowest p-8 md:flex-row md:p-12">
+                <div className="flex flex-col items-center justify-between gap-6 rounded-sm border border-outline-variant/20 bg-surface-container-lowest p-6 md:gap-8 md:flex-row md:p-12">
                     <div className="text-left">
                         <h3 className="mb-2 font-headline text-2xl font-bold text-white">
                             {connect.resumeTitle}

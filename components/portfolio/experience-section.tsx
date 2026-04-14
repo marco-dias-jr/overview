@@ -8,19 +8,19 @@ export function ExperienceSection() {
     const experience = content.experience
 
     return (
-        <section className="scroll-mt-[80px] bg-surface-container-lowest py-32" id="experience">
-            <div className="mx-auto max-w-7xl px-8">
-                <div className="flex flex-col gap-16 md:flex-row">
+        <section className="scroll-mt-10 bg-surface-container-lowest py-20 md:scroll-mt-[80px] md:py-32" id="experience">
+            <div className="mx-auto max-w-7xl px-5 sm:px-6 md:px-8">
+                <div className="flex flex-col gap-10 md:gap-16 md:flex-row">
                     <div className="md:w-1/3">
                         <span className="mb-4 block font-label text-sm uppercase tracking-[0.3em] text-primary">
                             {experience.eyebrow}
                         </span>
-                        <h2 className="font-headline text-5xl font-extrabold tracking-tighter text-white">
+                        <h2 className="font-headline text-4xl font-extrabold tracking-tighter text-white md:text-5xl">
                             {experience.title}
                         </h2>
                     </div>
 
-                    <div className="space-y-12 md:w-2/3">
+                    <div className="space-y-10 md:w-2/3 md:space-y-12">
                         {experience.items.map((item) => (
                             <article
                                 key={`${item.title}-${item.period}`}
