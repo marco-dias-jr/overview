@@ -235,7 +235,7 @@ export function SiteHeader() {
                 </div>
             </nav>
 
-            <div className="fixed bottom-15 right-4 z-50 md:hidden">
+            <div className="fixed bottom-4 right-4 z-50 md:hidden">
                 <div
                     className="transition-[width,height] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
                     style={{ width: `${mobileMenuWidth}px`, height: `${mobileMenuHeight}px` }}
