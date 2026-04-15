@@ -33,11 +33,18 @@ export function PortfolioI18nProvider({
     children: ReactNode
     initialLocale: Locale
 }) {
-    const [locale, setLocale] = useState<Locale>(() => {
-        if (typeof window === "undefined") return initialLocale
+    const [locale, setLocale] = useState<Locale>(initialLocale)
+
+    useEffect(() => {
         const storedValue = window.localStorage.getItem(STORAGE_KEY)
-        return storedValue ? normalizeLocale(storedValue) : initialLocale
-    })
+        const storedLocale = storedValue ? normalizeLocale(storedValue) : null
+        if (storedLocale && storedLocale !== locale) {
+            setLocale(storedLocale)
+        }
+        // We intentionally don't add `locale` as a dependency:
+        // the goal is to reconcile once after mount to avoid hydration mismatches.
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     useEffect(() => {
         window.localStorage.setItem(STORAGE_KEY, locale)

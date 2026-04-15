@@ -2,6 +2,7 @@
 
 import { Briefcase, Download, Mail, MessageCircle, Terminal } from "lucide-react"
 import { usePortfolioI18n } from "./i18n-provider"
+import { useReplayInView } from "./use-replay-in-view"
 
 function ContactIcon({ icon, className }: { icon: string; className?: string }) {
     const props = { className, strokeWidth: 1.3 }
@@ -17,24 +18,48 @@ function ContactIcon({ icon, className }: { icon: string; className?: string }) 
 export function ConnectSection() {
     const { content } = usePortfolioI18n()
     const connect = content.connect
+    const { ref, replayKey, inView } = useReplayInView<HTMLElement>({
+        threshold: 0.2,
+        rootMargin: "-10% 0px -15% 0px",
+    })
+    const hideAnimated = inView === false
 
     return (
-        <section className="scroll-mt-[38px] relative overflow-hidden py-20 md:scroll-mt-[40px] md:py-32" id="connect">
+        <section
+            ref={ref}
+            className="scroll-mt-[38px] relative overflow-hidden py-20 md:scroll-mt-[40px] md:py-32"
+            id="connect"
+        >
             <div className="absolute top-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-outline-variant/30 to-transparent" />
 
-            <div className="relative z-10 mx-auto max-w-4xl px-5 text-center sm:px-6 md:px-8">
-                <span className="mb-6 block font-label text-sm uppercase tracking-[0.3em] text-primary">
+            <div
+                aria-hidden={hideAnimated}
+                className={
+                    hideAnimated
+                        ? "pointer-events-none opacity-0 transition-opacity duration-300 ease-out"
+                        : "opacity-100 transition-opacity duration-200 ease-out"
+                }
+            >
+            <div key={replayKey} className="relative z-10 mx-auto max-w-4xl px-5 text-center sm:px-6 md:px-8">
+                <span
+                    className="mb-6 block font-label text-sm uppercase tracking-[0.3em] text-primary animate-slide-fade-in-left"
+                    style={{ animationDelay: "0.02s" }}
+                >
                     {connect.eyebrow}
                 </span>
-                <h2 className="mb-8 font-headline text-4xl font-extrabold leading-tight tracking-tighter text-white md:mb-10 md:text-6xl">
+                <h2
+                    className="mb-8 font-headline text-4xl font-extrabold leading-tight tracking-tighter text-white md:mb-10 md:text-6xl animate-slide-fade-in-left"
+                    style={{ animationDelay: "0.06s" }}
+                >
                     {connect.title}
                 </h2>
 
                 <div className="mb-12 grid grid-cols-2 gap-3 md:mb-16 md:grid-cols-4 md:gap-4">
-                    {connect.links.map((link) => (
+                    {connect.links.map((link, index) => (
                         <a
                             key={link.label}
-                            className="group flex flex-col items-center gap-3 rounded-sm border border-outline-variant/10 bg-surface-container-low p-5 transition-all hover:bg-surface-container-high md:p-6"
+                            className="group flex flex-col items-center gap-3 rounded-sm border border-outline-variant/10 bg-surface-container-low p-5 transition-all hover:bg-surface-container-high md:p-6 animate-scale-in"
+                            style={{ animationDelay: `${0.14 + index * 0.06}s` }}
                             href={link.href}
                             rel="noreferrer"
                             target={link.href.startsWith("mailto:") ? undefined : "_blank"}
@@ -66,6 +91,7 @@ export function ConnectSection() {
                         {connect.resumeButton}
                     </a>
                 </div>
+            </div>
             </div>
         </section>
     )

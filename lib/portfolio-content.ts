@@ -126,14 +126,14 @@ export const portfolioContentByLocale: Record<Locale, PortfolioContent> = {
             lastName: "Dias",
             role: "Senior Software Engineer",
             summary:
-                "Engineering high-performance web systems and AI-integrated architectures. I transform complex business logic into elegant, scalable digital experiences.",
+                "Engineering high-performance systems and AI-integrated architectures. I transform complex business logic into elegant, scalable digital experiences.",
             cta: {
-                href: "#stacks",
+                href: "#experience",
                 label: "View Work",
             },
         },
         experience: {
-            eyebrow: "Proven expertise",
+            eyebrow: "Applied knowledge",
             title: "Professional Journey",
             items: [
                 {
@@ -162,7 +162,7 @@ export const portfolioContentByLocale: Record<Locale, PortfolioContent> = {
             title: "The Stack I Mastered",
             categories: [
                 {
-                    title: "Frontend Engineering",
+                    title: "Frontend Development",
                     icon: "web",
                     description:
                         "Building reactive, high-performance interfaces with a focus on modern UX patterns and accessibility.",
@@ -258,14 +258,14 @@ export const portfolioContentByLocale: Record<Locale, PortfolioContent> = {
             lastName: "Dias",
             role: "Engenheiro de Software Sênior",
             summary:
-                "Engenharia de sistemas web de alta performance e arquiteturas integradas com IA. Transformo regras de negócio complexas em experiências digitais elegantes e escaláveis.",
+                "Desenvolvimento de sistemas de alta performance e arquiteturas integradas com IA. Transformo regras de negócio complexas em experiências digitais elegantes e escaláveis.",
             cta: {
-                href: "#stacks",
-                label: "Ver trabalhos",
+                href: "#experience",
+                label: "Navegar",
             },
         },
         experience: {
-            eyebrow: "Especialidade comprovada",
+            eyebrow: "Conhecimento aplicado",
             title: "Trajetória profissional",
             items: [
                 {
@@ -294,7 +294,7 @@ export const portfolioContentByLocale: Record<Locale, PortfolioContent> = {
             title: "Stack principal",
             categories: [
                 {
-                    title: "Engenharia Frontend",
+                    title: "Desenvolvimento Frontend",
                     icon: "web",
                     description:
                         "Interfaces reativas e rápidas, com foco em UX moderna e acessibilidade.",
